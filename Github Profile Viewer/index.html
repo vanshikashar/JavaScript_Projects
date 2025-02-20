@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Profile Viewer</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Github Profile Viewer</h1>
+        <input type="text" id="username" placeholder="Enter your Username"/>
+        <button onclick="fetchProfile()">Get Profile</button>
+        <div id="profile"></div>
+    </div>
+
+    <script>
+        function fetchProfile() {
+            const username = document.getElementById('username').value;
+            if(!username){
+                alert('Please enter a Github username');
+                return
+            }
+
+            fetch(`https://api.github.com/users/${username}`).then(response => {
+
+                if(!response.ok) {
+                    throw new Error('Network Response is not OK.');
+                }
+                return response.json();
+            }).then(data => {
+                displayProfile(data)
+            }).catch(err => {
+                console.error('There has been a problem with your fetch operation:', err);
+            })
+        }
+
+        function displayProfile(profileData) {
+            const profileElement = document.getElementById('profile');
+            profileElement.innerHTML = `
+            <h2>${profileData.name}</h2>
+            <img src ="${profileData.avatar_url}" style="width: 100px; height: 100px; border-radius: 50%;"/>
+            <p>Username: ${profileData.login}</p>
+            <p>Location: ${profileData.location}</p>
+            <p>Public Repos: ${profileData.public_repos}</p>
+            <p>Followers: ${profileData.followers}</p> />`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+body {
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 800px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.wrapper:hover {
+    transform: scale(1.02);
+}
+
+.typing-text p {
+    font-size: 22px;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.typing-text p span {
+    transition: color 0.3s ease-in-out;
+}
+
+.typing-text p span.active {
+    color: #ff5e62;
+    font-weight: bold;
+    font-size: 24px;
+    animation: blink 0.7s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.typing-text p span.correct {
+    color: #28a745;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.typing-text p span.incorrect {
+    color: #dc3545;
+    background: rgba(255, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 2px 4px;
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
+.content-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.content button {
+    width: 120px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.content button:hover {
+    background: #ff4e50;
+    transform: scale(1.05);
+}
+
+.content button:active {
+    transform: scale(0.95);
+}
+
+.result-details {
+    font-size: 18px;
+    color: #444;
+}
+
+.result-details span {
+    font-weight: bold;
+    font-size: 20px;
+    color: #ff5e62;
+    transition: color 0.3s ease-in-out;
+}
+
+.result-details span:hover {
+    color: #ff9966;
+}

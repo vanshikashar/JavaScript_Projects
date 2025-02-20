@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Retrieval App</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Save and Retrieve Data</h1>
+        <form id="dataForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+            
+            <button type="submit">Save Data</button>
+        </form>
+
+        <button id="retrieveData">Retrieve Saved Data</button>
+        <div id="savedData"></div>
+    </div>
+   
+    <script src="script.js"></script>
+</body>
+</html>

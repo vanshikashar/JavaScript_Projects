@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universe Shop</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-weight: bold;
+            color: aqua;
+        }
+        body{
+            font-family: "Playwrite AU SA", serif;
+            background-color: #0D1B2A;
+        }
+        header{
+            height: 70px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 1px solid black;
+        }
+        ul{
+            display: flex;
+            list-style-type: none;
+        }
+        ul li a{
+            margin: 0 5px;
+            border: 2px solid aqua;
+            padding: 0px 10px;
+            border-radius: 50px;
+            text-decoration: none;
+        }
+        .logo img{
+            width: 80px; /* Set the size of the image */
+            height: 70px; /* Ensure it's a square for the circle to work */
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image fits within the circle */
+            border: 3px solid #000; /* Optional: Add a border */
+        }
+        .signup:hover{
+            background-color: aqua;
+            color:black;
+        }
+        main{
+            display: flex;
+            height: 90vh;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 0px 150px;
+        }
+        .contentleft{
+            flex: 1;
+        }
+        .contentmid{
+            flex: 2;
+        }
+        .contentright{
+            flex: 1;
+        }
+        .sat{
+            max-width: 500px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="universeshoplogo.png" alt="Universe Shop Logo" width="100" height="70"></div>
+        <nav>
+            <ul>
+                <li><a href = "#">Home</a></li>
+                <li><a href = "#">Offer</a></li>
+                <li><a href = "#">Buy Now</a></li>
+                <li><a href = "#">Sell Now</a></li>
+                <li><a href = "#">About Us</a></li>
+                <li><a href = "#" class="signup">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contentleft"></div>
+        <h2>Saturn</h2>
+
+        <div class="contentmid"></div>
+        <p>Saturn is the sixth planet from the Sun and the second-largest in the Solar System. Known for its stunning ring system, Saturn is a gas giant primarily composed of hydrogen and helium. Its atmosphere is thick with clouds of ammonia and methane, and it has at least 82 moons, with Titan being the largest. </p>
+
+        <div class="contentright"></div>
+        <img src="saturn.png" alt="saturn" class="sat">
+    </main>
+</body>
+</html>
